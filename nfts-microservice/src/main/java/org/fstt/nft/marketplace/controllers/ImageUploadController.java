@@ -15,7 +15,7 @@ public class ImageUploadController {
 	@Autowired
 	private ImageUploadService imageUploadService;
 	
-	@RequestMapping(value= "/upload", method = RequestMethod.POST)
+	@RequestMapping(value= "/nfts/upload", method = RequestMethod.POST)
 	public String uploadImage(@RequestParam("file") MultipartFile file) throws Exception{
 		return imageUploadService.uploadImage(file);
 	}
