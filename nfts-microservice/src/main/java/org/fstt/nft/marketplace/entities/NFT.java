@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class NFT {
 	
 	@Id
-	private Long _id;
+	private String _id;
 	
 	private String name;
 	
@@ -21,14 +21,49 @@ public class NFT {
 	
 	private String imageCover;
 	
-	private String[] images;
 
 	public NFT() {
 		super();
 	}
+	
+	public NFT(String _id, String name, double price,
+			String description) {
+		super();
+		this._id = _id;
+		this.name = name;
+		this.price = price;
+		this.description = description;
+	}
+	
+	public NFT(String name, double price,
+			String description) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.description = description;
+	}
+	
+	public NFT( String name, double price,
+			String description, String imageCover) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.description = description;
+		this.imageCover = imageCover;
+	}
+	
+	public NFT(String _id, String name, double price,
+			String description, String imageCover) {
+		super();
+		this._id = _id;
+		this.name = name;
+		this.price = price;
+		this.description = description;
+		this.imageCover = imageCover;
+	}
 
-	public NFT(Long _id, String name, Double ratingsAverage, Integer ratingsNumber, double price, String summary,
-			String description, String imageCover, String[] images) {
+	public NFT(String _id, String name, Double ratingsAverage, Integer ratingsNumber, double price,
+			String description, String imageCover) {
 		super();
 		this._id = _id;
 		this.name = name;
@@ -37,11 +72,10 @@ public class NFT {
 		this.price = price;
 		this.description = description;
 		this.imageCover = imageCover;
-		this.images = images;
 	}
 
-	public NFT(String name, Double ratingsAverage, Integer ratingsNumber, double price, String summary,
-			String description, String imageCover, String[] images) {
+	public NFT(String name, Double ratingsAverage, Integer ratingsNumber, double price,
+			String description, String imageCover) {
 		super();
 		this.name = name;
 		this.ratingsAverage = ratingsAverage;
@@ -49,14 +83,13 @@ public class NFT {
 		this.price = price;
 		this.description = description;
 		this.imageCover = imageCover;
-		this.images = images;
 	}
 
-	public Long get_id() {
+	public String get_id() {
 		return _id;
 	}
 
-	public void set_id(Long _id) {
+	public void set_id(String _id) {
 		this._id = _id;
 	}
 
@@ -107,13 +140,4 @@ public class NFT {
 	public void setImageCover(String imageCover) {
 		this.imageCover = imageCover;
 	}
-
-	public String[] getImages() {
-		return images;
-	}
-
-	public void setImages(String[] images) {
-		this.images = images;
-	}
-	
 }

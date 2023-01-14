@@ -8,11 +8,11 @@ public interface NFTService {
 	
 	public NFT saveNFT(NFT nft);
 
-	public NFT updateNFT(NFT nft, Long id);
+	public NFT updateNFT(NFT nft, String id);
 
-	public NFT getNFT(Long id);
+	public NFT getNFT(String id);
 
-	public void deleteNFT(Long id);
+	public void deleteNFT(String id);
 
 	public List<NFT> listNFT();
 

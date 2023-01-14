@@ -1,8 +1,13 @@
 package org.fstt.nft.marketplace;
 
+import org.fstt.nft.marketplace.entities.NFT;
+import org.fstt.nft.marketplace.services.NFTService;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -12,4 +17,14 @@ public class NftsMicroserviceApplication {
 		SpringApplication.run(NftsMicroserviceApplication.class, args);
 	}
 
+	/*
+	 * 
+	@Bean 
+	CommandLineRunner runner(NFTService nftService) {
+		return args -> {
+			NFT nft = new NFT("7676986", 768, "big munk");
+			nftService.saveNFT(nft);
+		};
+		
+	}*/
 }

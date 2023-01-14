@@ -19,24 +19,24 @@ public class NFTController {
 	@Autowired
 	private NFTService nftService;
 
-	@RequestMapping(value = "/api/nfts", method = RequestMethod.POST)
+	@RequestMapping(value = "/api/nfts", method = RequestMethod.POST, consumes = {"application/json"})
 	@ResponseBody
 	public NFT saveNFT(@RequestBody NFT nft) {
 		return nftService.saveNFT(nft);
 	}
 
-	@RequestMapping(value = "/api/nfts/{id}", method = RequestMethod.PUT)
-	public NFT updateArticle(@RequestBody NFT nft, @PathVariable Long id) {
+	@RequestMapping(value = "/api/nfts/{id}", method = RequestMethod.PUT , consumes = {"application/json"})
+	public NFT updateArticle(@RequestBody NFT nft, @PathVariable String id) {
 		return nftService.updateNFT(nft, id);
 	}
 
 	@RequestMapping(value = "/api/nfts/{id}", method = RequestMethod.GET)
-	public NFT getNft(@PathVariable Long id) {
+	public NFT getNft(@PathVariable String id) {
 		return nftService.getNFT(id);
 	}
 
 	@RequestMapping(value = "/api/nfts/{id}", method = RequestMethod.DELETE)
-	public void deleteNFT(@PathVariable Long id) {
+	public void deleteNFT(@PathVariable String id) {
 		nftService.deleteNFT(id);
 	}
 
