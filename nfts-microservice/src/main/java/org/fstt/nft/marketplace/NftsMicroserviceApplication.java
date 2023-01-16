@@ -22,7 +22,7 @@ public class NftsMicroserviceApplication {
 	@Bean 
 	CommandLineRunner runner(NFTService nftService) {
 		return args -> {
-			NFT nft = new NFT("7676986", 768, "big munk");
+			NFT nft = new NFT("big monkey", 768, "description");
 			nftService.saveNFT(nft);
 		};
 		

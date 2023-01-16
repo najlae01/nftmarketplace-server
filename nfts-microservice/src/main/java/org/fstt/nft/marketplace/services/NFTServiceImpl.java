@@ -26,8 +26,7 @@ public class NFTServiceImpl implements NFTService{
 		if(nft.getImageCover() != null) existNft.setImageCover(nft.getImageCover());
 		if(nft.getName() != null) existNft.setName(nft.getName());
 		if(nft.getPrice() != null) existNft.setPrice(nft.getPrice());
-		if(nft.getRatingsAverage() != null) existNft.setRatingsAverage(nft.getRatingsAverage());
-		if(nft.getRatingsNumber() != null) existNft.setRatingsNumber(nft.getRatingsNumber());
+		if(nft.getUserId() != null) existNft.setUserId(nft.getUserId());
 		
 		return nftRepository.save(existNft);
 	}
