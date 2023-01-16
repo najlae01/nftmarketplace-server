@@ -17,7 +17,7 @@ public class NFT {
 	
 	private String imageCover;
 	
-	private String userId;
+	private String ownerId;
 	
 
 	public NFT() {
@@ -25,43 +25,43 @@ public class NFT {
 	}
 	
 	public NFT(String _id, String name, double price,
-			String description, String userId) {
+			String description, String ownerId) {
 		super();
 		this._id = _id;
 		this.name = name;
 		this.price = price;
 		this.description = description;
-		this.userId = userId;
+		this.ownerId = ownerId;
 	}
 	
-	public NFT(String name, double price, String userId,
-			String description) {
+	public NFT(String name, double price, 
+			String description, String ownerId) {
 		super();
 		this.name = name;
 		this.price = price;
 		this.description = description;
-		this.userId = userId;
+		this.ownerId = ownerId;
 	}
 	
 	public NFT( String name, double price,
-			String description, String userId, String imageCover) {
+			String description, String ownerId, String imageCover) {
 		super();
 		this.name = name;
 		this.price = price;
 		this.description = description;
 		this.imageCover = imageCover;
-		this.userId = userId;
+		this.ownerId = ownerId;
 	}
 	
 	public NFT(String _id, String name, double price,
-			String description, String userId, String imageCover) {
+			String description, String ownerId, String imageCover) {
 		super();
 		this._id = _id;
 		this.name = name;
 		this.price = price;
 		this.description = description;
 		this.imageCover = imageCover;
-		this.userId = userId;
+		this.ownerId = ownerId;
 	}
 
 
@@ -105,10 +105,10 @@ public class NFT {
 	}
 
 	public String getUserId() {
-		return userId;
+		return ownerId;
 	}
 
 	public void setUserId(String userId) {
-		this.userId = userId;
+		this.ownerId = userId;
 	}
 }
