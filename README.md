@@ -8,13 +8,11 @@ Links to related repositories:
 
 [Client Side](https://github.com/najlae01/nftmarketplace-client)
 
-## Spring Boot Project
-
-### Microservices Overview
+## Microservices Overview
 
 A **Microservice Application** structures an app as a collection of small, loosely-coupled services. Each service runs in its own process and communicates via APIs. This architecture allows for greater scalability, flexibility, and ease of deployment compared to a monolithic approach.
 
-### 1. Setting up Microservices
+### Setting up Microservices
 
 - **Service Registry**:
 
@@ -39,7 +37,7 @@ A **Microservice Application** structures an app as a collection of small, loose
   - Created necessary routes.
   - Registered the API Gateway with Eureka server (Port 9191).
 
-### 2. Creating REST APIs
+## Creating REST APIs
 
 - **Main API Endpoint: `/api/nfts/`**:
 
